@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BookCollectionViewCell : UICollectionViewCell
 @property (strong, nonatomic) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UILabel *author;
+@property (strong, nonatomic) IBOutlet UIImageView *coverImage;
 
 @end
 
