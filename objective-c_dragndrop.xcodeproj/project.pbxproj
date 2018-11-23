@@ -94,8 +94,8 @@
 		A1F8E82C21A7C69000ABC426 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				A1F8E83821A7D07C00ABC426 /* Books.plist */,
 				A1F8E82D21A7C77F00ABC426 /* BookLibrary.h */,
+				A1F8E83821A7D07C00ABC426 /* Books.plist */,
 				A1F8E82E21A7C77F00ABC426 /* BookLibrary.m */,
 				A1F8E83021A7C89700ABC426 /* Book.h */,
 				A1F8E83121A7C89700ABC426 /* Book.m */,

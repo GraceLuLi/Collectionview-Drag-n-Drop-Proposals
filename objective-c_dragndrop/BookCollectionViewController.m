@@ -38,6 +38,7 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     BookCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+    
     cell.title.text = self.books[indexPath.item].title;
     cell.author.text = self.books[indexPath.item].author;
     cell.coverImage.image = self.books[indexPath.item].cover;
