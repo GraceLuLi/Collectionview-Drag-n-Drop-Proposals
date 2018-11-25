@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.73359"
+            timestampString = "564810352.042202"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.7342891"
+            timestampString = "564810352.043105"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.734766"
+            timestampString = "564810352.0442621"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/Data Model/BookLibrary.m"
-            timestampString = "564800721.7351789"
+            timestampString = "564810352.044945"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "28"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/Data Model/BookLibrary.m"
-            timestampString = "564800721.735263"
+            timestampString = "564810352.045037"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/Data Model/BookLibrary.m"
-            timestampString = "564800721.735335"
+            timestampString = "564810352.045109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.73541"
+            timestampString = "564810352.0451829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -122,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.735966"
+            timestampString = "564810352.0457571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.736438"
+            timestampString = "564810352.046298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -150,27 +150,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.7368701"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
-            landmarkName = "-reorder:to:with:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/Data Model/BookLibrary.m"
-            timestampString = "564800721.737362"
+            timestampString = "564810352.0469559"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -186,60 +170,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookCollectionViewController.m"
-            timestampString = "564800721.737445"
+            timestampString = "564810352.047053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "-loadAndInsertItemsAt:with:"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "-collectionView:performDropWithCoordinator:"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BookCollectionViewController loadAndInsertItemsAt:with:]"
-                  moduleName = "objective-c_dragndrop"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luli/Documents/IOSDeveloper/objective-c_dragndrop/objective-c_dragndrop/BookCollectionViewController.m"
-                  timestampString = "564800669.7694629"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "591">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__58-[BookCollectionViewController loadAndInsertItemsAt:with:]_block_invoke"
-                  moduleName = "objective-c_dragndrop"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luli/Documents/IOSDeveloper/objective-c_dragndrop/objective-c_dragndrop/BookCollectionViewController.m"
-                  timestampString = "564800669.772572"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "78">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "__destroy_helper_block_"
-                  moduleName = "objective-c_dragndrop"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/luli/Documents/IOSDeveloper/objective-c_dragndrop/objective-c_dragndrop/BookCollectionViewController.m"
-                  timestampString = "564800669.776136"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

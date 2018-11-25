@@ -70,62 +70,17 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
 #pragma mark drop
 
 - (void)collectionView:(UICollectionView *)collectionView performDropWithCoordinator:(id<UICollectionViewDropCoordinator>)coordinator {
-    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath ? coordinator.destinationIndexPath : [NSIndexPath indexPathWithIndex:0];
+    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath ? coordinator.destinationIndexPath: [NSIndexPath indexPathForItem:self.books.count inSection:0];
+    [coordinator.session loadObjectsOfClass:UIImage.self completion:^(NSArray<__kindof id<NSItemProviderReading>> * _Nonnull objects) {
+        for(UIImage *image in objects) {
 
-    [self loadAndInsertItemsAt:destinationIndexPath with:coordinator];
-    //[self reorder:coordinator.items.firstObject to:destinationIndexPath with:coordinator];
-}
-
-- (void)loadAndInsertItemsAt:(NSIndexPath *)destinationIndexPath with:(id<UICollectionViewDropCoordinator>)coordinator {
-    
-    for (id<UICollectionViewDropItem> item in coordinator.items) {
-        UIDragItem *dragItem = item.dragItem;
-        if(![dragItem.itemProvider canLoadObjectOfClass:UIImage.self]) {continue;}
-        
-        // Start loading the image for this drag item.
-        [dragItem.itemProvider loadObjectOfClass:(UIImage.self) completionHandler:^(id<NSItemProviderReading>  _Nullable droppedImage, NSError * _Nullable error) {
-            if([droppedImage isKindOfClass:UIImage.self]) {
-                Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:(UIImage *)droppedImage];
-                
-                [self.bookLibrary insertBook:newBook At:destinationIndexPath.item];
+            [self.collectionView performBatchUpdates:^{
+                Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:(UIImage *)image];
+                [self.bookLibrary insertBook:newBook At:0];
                 self.books = self.bookLibrary.books;
-            }
-        }];
-        
-        UICollectionViewDropPlaceholder * placeholder = [[UICollectionViewDropPlaceholder alloc] initWithInsertionIndexPath:destinationIndexPath reuseIdentifier:@"BookCollectionViewCell"];
-        [placeholder cellUpdateHandler];
-        
-        [coordinator dropItem:dragItem toPlaceholder:placeholder];
-        
-        [self.collectionView reloadData];
-    }
-    
-    // Disable the system progress indicator as we are displaying the progress of drag items in the placeholder cells.
-    coordinator.session.progressIndicatorStyle = UIDropSessionProgressIndicatorStyleNone;
-}
-
-- (void)movesItemsTo:(NSIndexPath *)destinationIndexPath with:(id<UICollectionViewDropCoordinator>)coordinator {
-    for (id<UICollectionViewDropItem> item in coordinator.items) {
-        
-        UIImage *image = [UIImage imageNamed:@"book2Cover"];//item.dragItem.localObject;
-        Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:image];
-        
-        [_collectionView performBatchUpdates:^{
-            [self.bookLibrary insertBook:newBook At:destinationIndexPath.item];
-            self.books = self.bookLibrary.books;
-            [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
-        } completion:nil];
-    }
-}
-
-- (void)reorder:(id<UICollectionViewDropItem>)item to:(NSIndexPath *)destinationIndexPath with:(id<UICollectionViewDropCoordinator>)coordinator {
-    
-    [_collectionView performBatchUpdates:^{
-        [self.bookLibrary moveBookFrom:item.sourceIndexPath.item to: destinationIndexPath.item];
-        [self.collectionView deleteItemsAtIndexPaths:@[item.sourceIndexPath]];
-        [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
-    } completion:nil];
-    
-    [coordinator dropItem:item.dragItem toItemAtIndexPath:destinationIndexPath];
+                [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
+            } completion:nil];
+        }
+    }];
 }
 @end
