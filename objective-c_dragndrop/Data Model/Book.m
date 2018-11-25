@@ -16,6 +16,13 @@
 
 @implementation Book
 
+- (instancetype)initWithTitle:(NSString *)title Author:(NSString *)author CoverImage:(UIImage *)image {
+    _title = title;
+    _author = author;
+    _cover = image;
+    return self;
+}
+
 - (instancetype)initWithDictionary:(NSDictionary<NSString *, NSObject *> *) initDictionary {
     self = [super init];
     
@@ -23,7 +30,7 @@
         _title = (NSString *)initDictionary[@"title"];
         _author = (NSString *)initDictionary[@"author"];
         _coverImageName = (NSString *)initDictionary[@"coverImageName"];
-        _cover = [UIImage imageNamed:_coverImageName];
+        _cover = [UIImage imageNamed: _coverImageName];
     }
     return self;
 }

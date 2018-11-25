@@ -39,4 +39,16 @@
     return self;
 }
 
+- (void)moveBookFrom:(NSInteger)sourceIndex to:(NSInteger)destinationIndex {
+    NSMutableArray<Book *> *bookList = [self.books copy];
+    [bookList exchangeObjectAtIndex:sourceIndex withObjectAtIndex:destinationIndex];
+    _books = bookList;
+}
+
+- (void)insertBook:(Book *)book At:(NSInteger)destinationIndex {
+    NSMutableArray<Book *> *bookList = [NSMutableArray arrayWithArray:self.books];
+    [bookList insertObject:book atIndex:0];
+    _books = bookList;
+}
+
 @end

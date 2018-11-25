@@ -13,9 +13,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BookLibrary : NSObject
 
+@property (nonatomic) NSArray<Book *> *books;
+
 + (instancetype)sharedInstance;
 
-@property (nonatomic) NSArray<Book *> *books;
+- (void)moveBookFrom:(NSInteger)sourceIndex to:(NSInteger)destinationIndex;
+- (void)insertBook:(Book *)book At:(NSInteger)destinationIndex;
 
 @end
 

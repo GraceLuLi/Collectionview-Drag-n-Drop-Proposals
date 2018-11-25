@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic) NSString *author;
 @property(nonatomic) UIImage *cover;
 
+- (instancetype)initWithTitle:(NSString *)title Author:(NSString *)author CoverImage:(UIImage *)image;
 - (instancetype)initWithDictionary:(NSDictionary<NSString *, NSObject *> *) initDictionary;
 
 @end
