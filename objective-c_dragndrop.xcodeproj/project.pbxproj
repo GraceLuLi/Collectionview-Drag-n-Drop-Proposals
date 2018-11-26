@@ -15,10 +15,13 @@
 		A10B9D9921A5308700DC133A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A10B9D9821A5308700DC133A /* main.m */; };
 		A10B9DA221A5390100DC133A /* BookCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A10B9DA021A5390100DC133A /* BookCollectionViewCell.m */; };
 		A10B9DA321A5390100DC133A /* BookCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10B9DA121A5390100DC133A /* BookCollectionViewCell.xib */; };
-		A1F8E82B21A7C1EE00ABC426 /* Sample Data in Resources */ = {isa = PBXBuildFile; fileRef = A1F8E82A21A7C1EE00ABC426 /* Sample Data */; };
+		A1B442DA21AB61BE00CD2011 /* Sample Data in Resources */ = {isa = PBXBuildFile; fileRef = A1B442D921AB61BE00CD2011 /* Sample Data */; };
+		A1B442DE21AB63A400CD2011 /* BookshelfTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B442DD21AB63A400CD2011 /* BookshelfTableViewController.m */; };
+		A1B442E421AB68D500CD2011 /* Bookshelf.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B442E321AB68D500CD2011 /* Bookshelf.m */; };
+		A1B442EB21AB705600CD2011 /* BookLibary.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1B442EA21AB705600CD2011 /* BookLibary.plist */; };
+		A1B442EE21ABAC7F00CD2011 /* BookshelfTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A1B442ED21ABAC7F00CD2011 /* BookshelfTableViewCell.m */; };
 		A1F8E82F21A7C77F00ABC426 /* BookLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F8E82E21A7C77F00ABC426 /* BookLibrary.m */; };
 		A1F8E83221A7C89700ABC426 /* Book.m in Sources */ = {isa = PBXBuildFile; fileRef = A1F8E83121A7C89700ABC426 /* Book.m */; };
-		A1F8E83921A7D07C00ABC426 /* Books.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1F8E83821A7D07C00ABC426 /* Books.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,12 +38,18 @@
 		A10B9D9F21A5390100DC133A /* BookCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookCollectionViewCell.h; sourceTree = "<group>"; };
 		A10B9DA021A5390100DC133A /* BookCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookCollectionViewCell.m; sourceTree = "<group>"; };
 		A10B9DA121A5390100DC133A /* BookCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookCollectionViewCell.xib; sourceTree = "<group>"; };
-		A1F8E82A21A7C1EE00ABC426 /* Sample Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sample Data"; sourceTree = "<group>"; };
+		A1B442D921AB61BE00CD2011 /* Sample Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Sample Data"; sourceTree = "<group>"; };
+		A1B442DC21AB63A400CD2011 /* BookshelfTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookshelfTableViewController.h; sourceTree = "<group>"; };
+		A1B442DD21AB63A400CD2011 /* BookshelfTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookshelfTableViewController.m; sourceTree = "<group>"; };
+		A1B442E221AB68D500CD2011 /* Bookshelf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bookshelf.h; sourceTree = "<group>"; };
+		A1B442E321AB68D500CD2011 /* Bookshelf.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bookshelf.m; sourceTree = "<group>"; };
+		A1B442EA21AB705600CD2011 /* BookLibary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BookLibary.plist; sourceTree = "<group>"; };
+		A1B442EC21ABAC7F00CD2011 /* BookshelfTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookshelfTableViewCell.h; sourceTree = "<group>"; };
+		A1B442ED21ABAC7F00CD2011 /* BookshelfTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookshelfTableViewCell.m; sourceTree = "<group>"; };
 		A1F8E82D21A7C77F00ABC426 /* BookLibrary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BookLibrary.h; sourceTree = "<group>"; };
 		A1F8E82E21A7C77F00ABC426 /* BookLibrary.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BookLibrary.m; sourceTree = "<group>"; };
 		A1F8E83021A7C89700ABC426 /* Book.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Book.h; sourceTree = "<group>"; };
 		A1F8E83121A7C89700ABC426 /* Book.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Book.m; sourceTree = "<group>"; };
-		A1F8E83821A7D07C00ABC426 /* Books.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Books.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,29 +82,51 @@
 		A10B9D8821A5308300DC133A /* objective-c_dragndrop */ = {
 			isa = PBXGroup;
 			children = (
+				A1B442E521AB6B9D00CD2011 /* OneBookshelf */,
+				A1B442DB21AB631900CD2011 /* BookShelves */,
 				A10B9D8921A5308300DC133A /* AppDelegate.h */,
 				A10B9D8A21A5308300DC133A /* AppDelegate.m */,
-				A10B9D8C21A5308300DC133A /* BookCollectionViewController.h */,
-				A10B9D8D21A5308300DC133A /* BookCollectionViewController.m */,
 				A10B9D8F21A5308300DC133A /* Main.storyboard */,
 				A10B9D9221A5308700DC133A /* Assets.xcassets */,
 				A10B9D9421A5308700DC133A /* LaunchScreen.storyboard */,
 				A10B9D9721A5308700DC133A /* Info.plist */,
 				A10B9D9821A5308700DC133A /* main.m */,
-				A10B9D9F21A5390100DC133A /* BookCollectionViewCell.h */,
-				A10B9DA021A5390100DC133A /* BookCollectionViewCell.m */,
-				A10B9DA121A5390100DC133A /* BookCollectionViewCell.xib */,
-				A1F8E82A21A7C1EE00ABC426 /* Sample Data */,
+				A1B442D921AB61BE00CD2011 /* Sample Data */,
 				A1F8E82C21A7C69000ABC426 /* Data Model */,
 			);
 			path = "objective-c_dragndrop";
 			sourceTree = "<group>";
 		};
+		A1B442DB21AB631900CD2011 /* BookShelves */ = {
+			isa = PBXGroup;
+			children = (
+				A1B442DC21AB63A400CD2011 /* BookshelfTableViewController.h */,
+				A1B442DD21AB63A400CD2011 /* BookshelfTableViewController.m */,
+				A1B442EC21ABAC7F00CD2011 /* BookshelfTableViewCell.h */,
+				A1B442ED21ABAC7F00CD2011 /* BookshelfTableViewCell.m */,
+			);
+			path = BookShelves;
+			sourceTree = "<group>";
+		};
+		A1B442E521AB6B9D00CD2011 /* OneBookshelf */ = {
+			isa = PBXGroup;
+			children = (
+				A10B9D8C21A5308300DC133A /* BookCollectionViewController.h */,
+				A10B9D8D21A5308300DC133A /* BookCollectionViewController.m */,
+				A10B9D9F21A5390100DC133A /* BookCollectionViewCell.h */,
+				A10B9DA021A5390100DC133A /* BookCollectionViewCell.m */,
+				A10B9DA121A5390100DC133A /* BookCollectionViewCell.xib */,
+			);
+			path = OneBookshelf;
+			sourceTree = "<group>";
+		};
 		A1F8E82C21A7C69000ABC426 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1B442E221AB68D500CD2011 /* Bookshelf.h */,
+				A1B442E321AB68D500CD2011 /* Bookshelf.m */,
 				A1F8E82D21A7C77F00ABC426 /* BookLibrary.h */,
-				A1F8E83821A7D07C00ABC426 /* Books.plist */,
+				A1B442EA21AB705600CD2011 /* BookLibary.plist */,
 				A1F8E82E21A7C77F00ABC426 /* BookLibrary.m */,
 				A1F8E83021A7C89700ABC426 /* Book.h */,
 				A1F8E83121A7C89700ABC426 /* Book.m */,
@@ -160,12 +191,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B442EB21AB705600CD2011 /* BookLibary.plist in Resources */,
 				A10B9D9621A5308700DC133A /* LaunchScreen.storyboard in Resources */,
 				A10B9DA321A5390100DC133A /* BookCollectionViewCell.xib in Resources */,
 				A10B9D9321A5308700DC133A /* Assets.xcassets in Resources */,
-				A1F8E83921A7D07C00ABC426 /* Books.plist in Resources */,
 				A10B9D9121A5308300DC133A /* Main.storyboard in Resources */,
-				A1F8E82B21A7C1EE00ABC426 /* Sample Data in Resources */,
+				A1B442DA21AB61BE00CD2011 /* Sample Data in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B442DE21AB63A400CD2011 /* BookshelfTableViewController.m in Sources */,
 				A1F8E82F21A7C77F00ABC426 /* BookLibrary.m in Sources */,
+				A1B442E421AB68D500CD2011 /* Bookshelf.m in Sources */,
+				A1B442EE21ABAC7F00CD2011 /* BookshelfTableViewCell.m in Sources */,
 				A10B9D8E21A5308300DC133A /* BookCollectionViewController.m in Sources */,
 				A10B9DA221A5390100DC133A /* BookCollectionViewCell.m in Sources */,
 				A10B9D9921A5308700DC133A /* main.m in Sources */,

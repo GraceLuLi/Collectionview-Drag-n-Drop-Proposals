@@ -30,7 +30,7 @@
         _title = (NSString *)initDictionary[@"title"];
         _author = (NSString *)initDictionary[@"author"];
         _coverImageName = (NSString *)initDictionary[@"coverImageName"];
-        _cover = [UIImage imageNamed: _coverImageName];
+        _cover = [UIImage imageNamed:[NSString stringWithFormat: @"Sample Data/%@.jpg", _coverImageName]];
     }
     return self;
 }

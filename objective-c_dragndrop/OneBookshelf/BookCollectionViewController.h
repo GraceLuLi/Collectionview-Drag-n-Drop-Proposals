@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class Bookshelf;
+
 @interface BookCollectionViewController : UIViewController
 
+@property(nullable, nonatomic) Bookshelf *bookshelf;
 
 @end
 

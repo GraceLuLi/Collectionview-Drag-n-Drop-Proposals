@@ -9,16 +9,13 @@
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
-@class Book;
+@class Bookshelf;
 
 @interface BookLibrary : NSObject
 
-@property (nonatomic) NSArray<Book *> *books;
+@property (nonatomic) NSArray<Bookshelf *> *bookshelves;
 
 + (instancetype)sharedInstance;
-
-- (void)moveBookFrom:(NSInteger)sourceIndex to:(NSInteger)destinationIndex;
-- (void)insertBook:(Book *)book At:(NSInteger)destinationIndex;
 
 @end
 

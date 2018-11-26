@@ -8,6 +8,7 @@
 
 #import "BookLibrary.h"
 #import "Book.h"
+#import "Bookshelf.h"
 
 @implementation BookLibrary
 
@@ -23,33 +24,20 @@
 - (instancetype)init {
     self = [super init];
     if (self != nil) {
-        NSURL *plistURL = [[NSBundle mainBundle] URLForResource:@"Books" withExtension:@"plist"];
+        NSURL *plistURL = [[NSBundle mainBundle] URLForResource:@"BookLibary" withExtension:@"plist"];
         
-        NSArray<NSDictionary *> *bookDictionaries = (NSArray<NSDictionary *> *)[NSArray arrayWithContentsOfURL:plistURL];
+        NSArray<NSDictionary *> *bookLibrary = (NSArray<NSDictionary *> *)[NSArray arrayWithContentsOfURL:plistURL];
         
-        NSMutableArray<Book *> *bookList = [NSMutableArray array];
+        NSMutableArray<Bookshelf *> *mutable_bookshelves = [NSMutableArray array];
         
-        for(NSDictionary *bookDictionary in bookDictionaries) {
-            Book *book = [[Book alloc] initWithDictionary:bookDictionary];
-            [bookList addObject:book];
+        
+        for(NSDictionary *bookshelfDictionary in bookLibrary) {
+            Bookshelf *bookshelf = [[Bookshelf alloc] initWithDictionary:bookshelfDictionary];
+            [mutable_bookshelves addObject:bookshelf];
         }
-        
-        _books = bookList;
+        _bookshelves = mutable_bookshelves;
     }
     return self;
-}
-
-- (void)moveBookFrom:(NSInteger)sourceIndex to:(NSInteger)destinationIndex {
-    NSMutableArray<Book *> *bookList = [self.books copy];
-    [bookList exchangeObjectAtIndex:sourceIndex withObjectAtIndex:destinationIndex];
-    _books = bookList;
-}
-
-- (void)insertBook:(Book *)book At:(NSInteger)destinationIndex {
-    NSMutableArray<Book *> *bookList = [NSMutableArray arrayWithArray:self.books];
-    //[bookList insertObject:book atIndex:destinationIndex];
-    [bookList addObjectsFromArray:@[book]];
-    _books = bookList;
 }
 
 @end

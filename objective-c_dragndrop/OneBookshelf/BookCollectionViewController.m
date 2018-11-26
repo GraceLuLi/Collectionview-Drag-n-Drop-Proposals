@@ -8,8 +8,9 @@
 
 #import "BookCollectionViewController.h"
 #import "BookCollectionViewCell.h"
-#import "Data Model/BookLibrary.h"
-#import "Data Model/Book.h"
+#import "../Data Model/BookLibrary.h"
+#import "../Data Model/Bookshelf.h"
+#import "../Data Model/Book.h"
 
 @interface BookCollectionViewController () <UICollectionViewDataSource,
                                             UICollectionViewDelegateFlowLayout,
@@ -31,11 +32,9 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
     
     UINib *cellNib = [UINib nibWithNibName:cellIdentifier bundle:[NSBundle bundleForClass:self.class]];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
-    self.title = @"BookCollection";
-    
-    self.bookLibrary = BookLibrary.sharedInstance;
-    self.books = self.bookLibrary.books;
-    
+    self.title = _bookshelf.category;
+    self.books = _bookshelf.bookList;
+
     // drag & drop
     self.collectionView.dragDelegate = self;
     self.collectionView.dropDelegate = self;
@@ -69,20 +68,20 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
 
 #pragma mark drop
 
-- (void)collectionView:(UICollectionView *)collectionView performDropWithCoordinator:(id<UICollectionViewDropCoordinator>)coordinator {
-    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath ? coordinator.destinationIndexPath: [NSIndexPath indexPathForItem:self.books.count inSection:0];
-    [coordinator.session loadObjectsOfClass:UIImage.self completion:^(NSArray<__kindof id<NSItemProviderReading>> * _Nonnull objects) {
-        for(UIImage *image in objects) {
-
-            [self.collectionView performBatchUpdates:^{
-                Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:(UIImage *)image];
-                [self.bookLibrary insertBook:newBook At:0];
-                self.books = self.bookLibrary.books;
-                [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
-            } completion:nil];
-        }
-    }];
-}
+//- (void)collectionView:(UICollectionView *)collectionView performDropWithCoordinator:(id<UICollectionViewDropCoordinator>)coordinator {
+//    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath ? coordinator.destinationIndexPath: [NSIndexPath indexPathForItem:self.books.count inSection:0];
+//    [coordinator.session loadObjectsOfClass:UIImage.self completion:^(NSArray<__kindof id<NSItemProviderReading>> * _Nonnull objects) {
+//        for(UIImage *image in objects) {
+//
+//            [self.collectionView performBatchUpdates:^{
+//                Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:(UIImage *)image];
+//                [self.bookLibrary insertBook:newBook At:0];
+//                self.books = self.bookLibrary.books;
+//                [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
+//            } completion:nil];
+//        }
+//    }];
+//}
 
 //
 //- (void)loadAndInsertItemsAt:(NSIndexPath *)destinationIndexPath with:(id<UICollectionViewDropCoordinator>)coordinator {
