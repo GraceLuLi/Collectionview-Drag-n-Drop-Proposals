@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BookshelfTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UILabel *category;
+@property (strong, nonatomic) IBOutlet UILabel *category;
 
 @end
 
