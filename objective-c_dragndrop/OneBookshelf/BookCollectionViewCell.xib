@@ -13,10 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BookCollectionViewCell" id="gTV-IL-0wX" customClass="BookCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="200" height="190"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="200" height="190"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRu-6G-l8e">
@@ -41,13 +41,13 @@
             </view>
             <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
             <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
-            <size key="customSize" width="267" height="170"/>
+            <size key="customSize" width="267" height="160"/>
             <connections>
                 <outlet property="author" destination="Yvl-fH-3z2" id="rA4-pR-PRd"/>
                 <outlet property="coverImage" destination="DUW-zn-wL9" id="2Ma-0D-pSo"/>
                 <outlet property="title" destination="pRu-6G-l8e" id="Eup-Dd-oGB"/>
             </connections>
-            <point key="canvasLocation" x="-272.80000000000001" y="9.8950524737631191"/>
+            <point key="canvasLocation" x="-216" y="-26.986506746626688"/>
         </collectionViewCell>
     </objects>
 </document>

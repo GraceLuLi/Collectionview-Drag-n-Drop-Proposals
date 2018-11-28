@@ -13,11 +13,10 @@
 #import "../Data Model/Book.h"
 
 @interface BookCollectionViewController () <UICollectionViewDataSource,
-                                            UICollectionViewDelegateFlowLayout,
-                                            UICollectionViewDragDelegate,
-                                            UICollectionViewDropDelegate>
+                                            UICollectionViewDelegateFlowLayout>
+                                            //UICollectionViewDragDelegate>
+                                            //UICollectionViewDropDelegate>
 
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (nonatomic) NSArray<Book *> *books;
 @property (nonatomic) BookLibrary *bookLibrary;
 
@@ -36,10 +35,9 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
     self.books = _bookshelf.bookList;
 
     // drag & drop
-    self.collectionView.dragDelegate = self;
-    self.collectionView.dropDelegate = self;
-}
-
+    //self.collectionView.dragDelegate = self;
+    //self.collectionView.dropDelegate = self;
+    }
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     BookCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
@@ -51,7 +49,7 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.books.count;
+    return  3;//self.books.count;
 }
 
 #pragma mark drag

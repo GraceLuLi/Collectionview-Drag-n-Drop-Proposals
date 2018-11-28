@@ -24,7 +24,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
     self.bookLibrary = BookLibrary.sharedInstance;
     self.bookshelves = self.bookLibrary.bookshelves;
 }
@@ -41,9 +41,16 @@
     Bookshelf *bookshelf = self.bookshelves[indexPath.item];
     cell.category.text = bookshelf.category;
     
-    BookCollectionViewController *bookCollectionViewController = [[BookCollectionViewController alloc] init];
-    bookCollectionViewController.bookshelf = bookshelf;    
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    BookCollectionViewController *bookCollectionViewController = [((UINavigationController *)self.splitViewController.viewControllers[1]).viewControllers firstObject];
+    
+    bookCollectionViewController.bookshelf = self.bookshelves[0];
+
+    [bookCollectionViewController.collectionView reloadData];
+//    [self.splitViewController showDetailViewController:bookCollectionViewController sender:self];
 }
 
 
