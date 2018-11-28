@@ -13,7 +13,6 @@
 @interface BookCollectionViewController : UIViewController
 
 @property(nullable, nonatomic) Bookshelf *bookshelf;
-@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
 @end
 

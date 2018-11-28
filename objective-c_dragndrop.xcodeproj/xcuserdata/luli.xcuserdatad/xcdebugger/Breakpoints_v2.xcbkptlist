@@ -202,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.681738"
+            timestampString = "565129859.427353"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "39"
@@ -218,7 +218,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.682694"
+            timestampString = "565129859.427858"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -234,7 +234,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.683086"
+            timestampString = "565129859.4279751"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"
@@ -250,7 +250,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.68343"
+            timestampString = "565129859.428066"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "27"
@@ -262,11 +262,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/OneBookshelf/BookCollectionViewController.m"
-            timestampString = "565078802.683769"
+            timestampString = "565129859.428151"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.684085"
+            timestampString = "565129859.429083"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -298,7 +298,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.684461"
+            timestampString = "565129859.429178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "49"
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/OneBookshelf/BookCollectionViewController.m"
-            timestampString = "565078802.684804"
+            timestampString = "565129859.429258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "-collectionView:cellForItemAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/OneBookshelf/BookCollectionViewController.m"
-            timestampString = "565078802.684871"
+            timestampString = "565129859.429724"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "BookCollectionViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -346,7 +346,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/BookShelves/BookshelfTableViewController.m"
-            timestampString = "565078802.684937"
+            timestampString = "565129859.430128"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -362,12 +362,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "objective-c_dragndrop/OneBookshelf/BookCollectionViewController.m"
-            timestampString = "565078802.685267"
+            timestampString = "565129859.430214"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
             landmarkName = "-viewDidLoad"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "objective-c_dragndrop/OneBookshelf/BookCollectionViewController.m"
+            timestampString = "565129859.430612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "-setBookshelf:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

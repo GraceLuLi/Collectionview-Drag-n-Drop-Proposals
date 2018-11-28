@@ -19,7 +19,7 @@
 
 @property (nonatomic) NSArray<Book *> *books;
 @property (nonatomic) BookLibrary *bookLibrary;
-
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
 @implementation BookCollectionViewController
@@ -31,13 +31,19 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
     
     UINib *cellNib = [UINib nibWithNibName:cellIdentifier bundle:[NSBundle bundleForClass:self.class]];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
-    self.title = _bookshelf.category;
-    self.books = _bookshelf.bookList;
 
     // drag & drop
     //self.collectionView.dragDelegate = self;
     //self.collectionView.dropDelegate = self;
     }
+
+#pragma mark update data
+- (void)setBookshelf:(Bookshelf *)bookshelf {
+    
+    _books = bookshelf.bookList;
+    _bookshelf = bookshelf;
+    [_collectionView reloadData];
+}
 
 - (nonnull __kindof UICollectionViewCell *)collectionView:(nonnull UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     BookCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];

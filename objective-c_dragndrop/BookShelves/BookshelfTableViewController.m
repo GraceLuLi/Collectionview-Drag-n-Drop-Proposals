@@ -48,8 +48,6 @@
     BookCollectionViewController *bookCollectionViewController = [((UINavigationController *)self.splitViewController.viewControllers[1]).viewControllers firstObject];
     
     bookCollectionViewController.bookshelf = self.bookshelves[0];
-
-    [bookCollectionViewController.collectionView reloadData];
 //    [self.splitViewController showDetailViewController:bookCollectionViewController sender:self];
 }
 
