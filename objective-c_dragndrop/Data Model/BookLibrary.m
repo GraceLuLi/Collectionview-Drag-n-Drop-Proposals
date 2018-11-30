@@ -30,7 +30,6 @@
         
         NSMutableArray<Bookshelf *> *mutable_bookshelves = [NSMutableArray array];
         
-        
         for(NSDictionary *bookshelfDictionary in bookLibrary) {
             Bookshelf *bookshelf = [[Bookshelf alloc] initWithDictionary:bookshelfDictionary];
             [mutable_bookshelves addObject:bookshelf];
@@ -38,6 +37,10 @@
         _bookshelves = mutable_bookshelves;
     }
     return self;
+}
+
+- (void)insertBook:(Book *)book toBookshelf:(NSInteger)bookshelfIndex atRow:(NSInteger)rowIndex {
+    [self.bookshelves[bookshelfIndex] insertBook:book At:rowIndex];
 }
 
 @end

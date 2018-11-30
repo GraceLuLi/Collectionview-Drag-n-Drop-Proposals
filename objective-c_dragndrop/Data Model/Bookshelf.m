@@ -36,6 +36,6 @@
 - (void)insertBook:(Book *)book At:(NSInteger)destinationIndex {
     NSMutableArray<Book *> *mutable_booklist = [NSMutableArray arrayWithArray:self.bookList];
     [mutable_booklist addObjectsFromArray:@[book]];
-    _bookList = mutable_booklist;
+    self.bookList = mutable_booklist;
 }
 @end

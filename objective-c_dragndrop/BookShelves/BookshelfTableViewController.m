@@ -46,9 +46,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     BookCollectionViewController *bookCollectionViewController = [((UINavigationController *)self.splitViewController.viewControllers[1]).viewControllers firstObject];
-    
+    ;
+    //TODO(graceluli): fix the indexPath.row == nil
     bookCollectionViewController.bookshelf = self.bookshelves[0];
-//    [self.splitViewController showDetailViewController:bookCollectionViewController sender:self];
 }
 
 

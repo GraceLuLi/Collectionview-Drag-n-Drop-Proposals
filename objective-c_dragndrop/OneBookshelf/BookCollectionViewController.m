@@ -13,12 +13,10 @@
 #import "../Data Model/Book.h"
 
 @interface BookCollectionViewController () <UICollectionViewDataSource,
-                                            UICollectionViewDelegateFlowLayout>
-                                            //UICollectionViewDragDelegate>
-                                            //UICollectionViewDropDelegate>
-
+                                            UICollectionViewDelegateFlowLayout,
+                                            UICollectionViewDragDelegate,
+                                            UICollectionViewDropDelegate>
 @property (nonatomic) NSArray<Book *> *books;
-@property (nonatomic) BookLibrary *bookLibrary;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @end
 
@@ -33,8 +31,8 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:cellIdentifier];
 
     // drag & drop
-    //self.collectionView.dragDelegate = self;
-    //self.collectionView.dropDelegate = self;
+    self.collectionView.dragDelegate = self;
+    self.collectionView.dropDelegate = self;
     }
 
 #pragma mark update data
@@ -55,7 +53,7 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return  3;//self.books.count;
+    return self.books.count;
 }
 
 #pragma mark drag
@@ -72,20 +70,21 @@ static NSString *cellIdentifier = @"BookCollectionViewCell";
 
 #pragma mark drop
 
-//- (void)collectionView:(UICollectionView *)collectionView performDropWithCoordinator:(id<UICollectionViewDropCoordinator>)coordinator {
-//    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath ? coordinator.destinationIndexPath: [NSIndexPath indexPathForItem:self.books.count inSection:0];
-//    [coordinator.session loadObjectsOfClass:UIImage.self completion:^(NSArray<__kindof id<NSItemProviderReading>> * _Nonnull objects) {
-//        for(UIImage *image in objects) {
-//
-//            [self.collectionView performBatchUpdates:^{
-//                Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:(UIImage *)image];
-//                [self.bookLibrary insertBook:newBook At:0];
-//                self.books = self.bookLibrary.books;
-//                [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
-//            } completion:nil];
-//        }
-//    }];
-//}
+- (void)collectionView:(UICollectionView *)collectionView performDropWithCoordinator:(id<UICollectionViewDropCoordinator>)coordinator {
+    NSIndexPath *destinationIndexPath = coordinator.destinationIndexPath ? coordinator.destinationIndexPath: [NSIndexPath indexPathForItem:self.books.count inSection:0];
+    [coordinator.session loadObjectsOfClass:UIImage.self completion:^(NSArray<__kindof id<NSItemProviderReading>> * _Nonnull objects) {
+        for(UIImage *image in objects) {
+
+            [self.collectionView performBatchUpdates:^{
+                Book *newBook = [[Book alloc] initWithTitle:@"unknown" Author:@"unknow" CoverImage:(UIImage *)image];
+                
+                [self.bookshelf insertBook:newBook At:0];
+                self.books = self.bookshelf.bookList;
+                [self.collectionView insertItemsAtIndexPaths:@[destinationIndexPath]];
+            } completion:nil];
+        }
+    }];
+}
 
 //
 //- (void)loadAndInsertItemsAt:(NSIndexPath *)destinationIndexPath with:(id<UICollectionViewDropCoordinator>)coordinator {

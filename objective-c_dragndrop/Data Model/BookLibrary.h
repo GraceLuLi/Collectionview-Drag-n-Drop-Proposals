@@ -10,12 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 @class Bookshelf;
+@class Book;
 
 @interface BookLibrary : NSObject
 
 @property (nonatomic) NSArray<Bookshelf *> *bookshelves;
 
 + (instancetype)sharedInstance;
+
+- (void)insertBook:(Book *)book toBookshelf:(NSInteger)bookshelfIndex atRow:(NSInteger)rowIndex;
 
 @end
 
